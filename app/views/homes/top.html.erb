@@ -1,2 +1,9 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<h1>welcome to <b>Bookers</b> !!</h1>
+<p>In Bookers,<br>
+
+you can share and exchange your opinions , inpressions , and emotions<br>
+
+about various books!</p>
+
+<button class="btn btn-success btn-lg" ><%= link_to 'Log in', new_user_session_path %></button>
+<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-success mx-auto d-block btn-sm" %>
