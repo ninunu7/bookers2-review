@@ -12,13 +12,21 @@
           </tr>
           <tr>
             <td>introduction</td>
-            <td><%#= current_user_introduction %></td>
+            <td><%= current_user.introduction %></td>
           </tr>
         </tbody>
       </table>
 
       <%= link_to '' , edit_user_path(@user.id), class: "fas fa-user-cog btn btn-outline-secondary mx-auto d-block btn-sm" %>
 
+    <h2>New Book</h2>
+    <%= form_with model:@book, local:true do |f| %>
+      <h4>Title</h4>
+        <%=f.text_field :title %>
+      <h4>Opinion</h4>
+        <%= f.text_area :body %>
+        <%= f.submit 'create book',class: 'btn btn-success' %>
+    <% end %>
     </div>
   </div>
 </div>
