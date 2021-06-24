@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   def index
     @user = current_user
     @book = Book.new
+    @books = Book.all
   end
 
   def create
@@ -27,6 +28,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    book.find(params[:id])
+    book.destroy
+    redirect_to books_path
   end
 
   private
