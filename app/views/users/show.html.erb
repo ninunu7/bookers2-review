@@ -1,5 +1,10 @@
 <div class="container">
   <div class="row">
+    <div class="col-lg-3 mt-3">
       <%= render 'users/user', user:@user, book:@book %>
+    </div>
+    <div class="col-lg-7 offset-lg-1 mt-3">
+      <%= render 'books/books', books: @books %>
+    </div>
   </div>
 </div>
