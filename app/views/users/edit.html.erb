@@ -3,11 +3,11 @@
     <div class="col-lg-6 offset-lg-3 mt-3">
       <h2>User Info</h2>
       <%= form_with model:@user, local:true do |f| %>
-        <h4>Name</h4>
+        <div class="my-2">Name</div>
         <%= text_field :name, id:"inputName" %>
-        <h4>Image</h4>
+        <div class="my-2">Image</div>
         <%= f.attachment_field :profile_image %>
-        <h4>Introduction</h4>
+        <div class="my-2">Introduction</div>
         <%= f.text_area :introduction %>
         <%= f.submit 'Update User', class: 'btn btn-secondary' %>
       <% end %>
